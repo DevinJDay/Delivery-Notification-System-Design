@@ -7,23 +7,36 @@
 | Assignment # | 2                          |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+A collection of retailers in a busy city have collaborated with local freelance van, taxi, and
+scooter drivers for the delivery of products to customer destinations. Your task is to develop a
+notification system that will inform drivers about delivery requests. Upon receiving a product
+delivery order from a store, a delivery request must be generated and sent to all available
+drivers
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/DevinJDay/cs-665-assignment-2
 
-# Implementation Description 
-
-
+# Implementation Description
 For each assignment, please answer the following:
 
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
-- Describe how you have avoided duplicated code and why it is important.
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.
+# Explain the level of flexibility in your implementation, including how new object types can be easily added or removed in the future.
+Using interfaces and inheritance, we can see a clear one-to-many dependencies between Shop and drivers.Thus we can easily add more shops, drivers and requests.
+
+# Discuss the simplicity and understandability of your implementation, ensuring that it is easy for others to read and maintain.
+In this implementation, I built a publisher interface implemented by the shop class, and a subscriber interface implemented by the driver class.
+Each of the classes "has a" deliveryRequest class. The scooterDriver, taxiDriver and vanDriver classes are children classes o the driver class.
+
+# Describe how you have avoided duplicated code and why it is important.
+I use interfaces, inheritance and association. 
+
+# If applicable, mention any design patterns you have used and explain why they were chosen.
+I am using the observer pattern which helps the store inform the drivers on the current delivery request.
+I think the observer pattern is suitable since we need the keep updating the request we get from new users,
+and we need to keep on changing the current status of the request and inform them to all drivers.
+
+Moreover, the loosely coupled design can allow us to build flexible applications that reduce the interdependency level between objects.
+
+# UML class diagram
 
 
 # Maven Commands

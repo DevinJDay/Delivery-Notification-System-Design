@@ -1,17 +1,29 @@
-package edu.bu.met.cs665.Publisher;
+/*
+ * Name: Jie Dai
+ * Course: cs665 Software Designs & Patterns
+ * Date: 02/23/2023
+ * File name: shop.java
+ * Description: This is the shop class.
+ */
+
+package edu.bu.met.cs665.Publishers;
 
 import edu.bu.met.cs665.Subscribers.*;
-
 import java.util.ArrayList;
 
+/**
+ * This is the shop class implementing the publisher interface.
+ * It has the latest delivery request, a list of drivers
+ * and the 3 methods from publisher interface to subscribe, unsubscribe and notify drivers.
+ */
 public class shop implements publisher{
 
     private deliveryRequest latestRequest;
     public String getLatestRequest() {
-        return latestRequest.getNewOrder();
+        return latestRequest.getOrderInfo();
     }
-    public void setLatestRequest(String newRequest) {
-        this.latestRequest = new deliveryRequest(newRequest);
+    public void setLatestRequest(deliveryRequest latestRequest) {
+        this.latestRequest = latestRequest;
     }
 
 
