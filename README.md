@@ -36,8 +36,6 @@ and we need to keep on changing the current status of the request and inform the
 
 Moreover, the loosely coupled design can allow us to build flexible applications that reduce the interdependency level between objects.
 
-# UML class diagram
-
 
 # Maven Commands
 
